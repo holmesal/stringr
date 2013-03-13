@@ -14,7 +14,9 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.Types.ObjectId
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost/stringr');
+console.log(process.env)
+mongopath = process.env.MONGOHQ_URL || 'mongodb://localhost/stringr'
+mongoose.connect(mongopath);
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
   console.log('connected to db')
