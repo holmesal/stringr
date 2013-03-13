@@ -1,0 +1,519 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"res",
+				"res"
+			],
+			[
+				"tofollow",
+				"tofollow_id"
+			],
+			[
+				"everything",
+				"everythingIsOkay"
+			],
+			[
+				"follow",
+				"followers"
+			],
+			[
+				"p",
+				"params"
+			],
+			[
+				"get",
+				"getString"
+			],
+			[
+				"getString",
+				"getStringHandler"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"auth",
+				"auth_token"
+			],
+			[
+				"find",
+				"findSchool"
+			],
+			[
+				"findSchoo",
+				"findSchoolHandler"
+			],
+			[
+				"strings",
+				"strings_count"
+			],
+			[
+				"make",
+				"makeAuthToken"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"border",
+				"border-left"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"lo",
+				"logo"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-transform"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "utils/sendmail.js",
+			"settings":
+			{
+				"buffer_size": 1374,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "endpoints/signup.js",
+			"settings":
+			{
+				"buffer_size": 1793,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 4354,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "endpoints/verify.js",
+			"settings":
+			{
+				"buffer_size": 1182,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api.txt",
+			"settings":
+			{
+				"buffer_size": 2941,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pack dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"fet",
+				"Fetch: Package"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": true,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/alonsoholmes/github/stringr/endpoints/user.js",
+		"/Users/alonsoholmes/github/stringr/package.json",
+		"/Users/alonsoholmes/github/stringr/models/photostring.js",
+		"/Users/alonsoholmes/github/stringr/models/comment.js",
+		"/Users/alonsoholmes/github/stringr/models/school.js",
+		"/Users/alonsoholmes/github/stringr/server.js",
+		"/Users/alonsoholmes/github/stringr/endpoints/verify.js",
+		"/Users/alonsoholmes/github/stringr/utils/authenticatify.js",
+		"/Users/alonsoholmes/github/stringr/api.txt",
+		"/Users/alonsoholmes/github/stringr/models/user.js",
+		"/Users/alonsoholmes/github/stringr/endpoints/signup.js",
+		"/Users/alonsoholmes/github/stringr/utils/sendmail.js",
+		"/Users/alonsoholmes/github/stringr/endpoints/photo.js",
+		"/Users/alonsoholmes/github/stringr/utils/signup.js",
+		"/Users/alonsoholmes/github/stringr/models/photo.js",
+		"/Users/alonsoholmes/github/stringr/endpoints/school.js",
+		"/Users/alonsoholmes/github/stringr/endpoints/string.js",
+		"/Users/alonsoholmes/github/stringr/models/string.js",
+		"/Users/alonsoholmes/github/stringr/utils/responsify.js",
+		"/Users/alonsoholmes/github/stringr/models.js",
+		"/Users/alonsoholmes/github/sharalike/conversation.html",
+		"/Users/alonsoholmes/github/sharalike/js/conversation.js",
+		"/Users/alonsoholmes/github/sharalike/css/conversation.css",
+		"/Users/alonsoholmes/github/sharalike/js/conversation.old.js",
+		"/Users/alonsoholmes/github/sharalike/js/dropzone.js",
+		"/Users/alonsoholmes/github/sharalike/conversation.old.html",
+		"/Users/alonsoholmes/github/sharalike/css/conversation.old.css",
+		"/Users/alonsoholmes/github/handypros/boston-home-repair-handyman.html",
+		"/Users/alonsoholmes/github/handypros/css/custom.css",
+		"/Users/alonsoholmes/github/handypros/index.html",
+		"/Users/alonsoholmes/github/handypros/js/jquery.mobilemenu.js",
+		"/Users/alonsoholmes/github/handypros/js/main.js",
+		"/Users/alonsoholmes/github/handypros/app.yaml",
+		"/Users/alonsoholmes/github/handypros/main.html",
+		"/Users/alonsoholmes/github/handypros/main.py",
+		"/Users/alonsoholmes/github/handypros/css/style.css",
+		"/Users/alonsoholmes/github/handypros/js/jquery.flexslider-min.js",
+		"/Users/alonsoholmes/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/alonsoholmes/github/handypros/css/landing.css",
+		"/Users/alonsoholmes/github/handypros/js/jquery.js",
+		"/Users/alonsoholmes/github/handypros/js/jquery.localscroll-1.2.7-min.js",
+		"/Users/alonsoholmes/github/handypros/js/bootstrap-modal.js",
+		"/Users/alonsoholmes/github/handypros/test/js/plugins.js",
+		"/Users/alonsoholmes/github/handypros/js/bootstrap-vanilla.min.js",
+		"/Users/alonsoholmes/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Users/alonsoholmes/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/alonsoholmes/github/handypros/test.js",
+		"/Users/alonsoholmes/Library/Application Support/Sublime Text 2/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/alonsoholmes/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/alonsoholmes/Library/Application Support/Sublime Text 2/Packages/Alignment/Base File.sublime-settings",
+		"/Users/alonsoholmes/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tofollow_username",
+			"password",
+			"PhotoString",
+			"res.send(",
+			"ObjectId",
+			"./img/alonso-mini.jpg",
+			"./img/",
+			"alonso-mini.jpg",
+			"jpg",
+			"alonso.jpg",
+			"\n",
+			"file",
+			"profile",
+			"&",
+			"\n",
+			"@media",
+			"current",
+			"#header",
+			"height",
+			"path",
+			"block"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "utils/sendmail.js",
+					"settings":
+					{
+						"buffer_size": 1374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1325,
+								1325
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 567.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "endpoints/signup.js",
+					"settings":
+					{
+						"buffer_size": 1793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1561,
+								1529
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server.js",
+					"settings":
+					{
+						"buffer_size": 4354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3541,
+								3541
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 925.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "endpoints/verify.js",
+					"settings":
+					{
+						"buffer_size": 1182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1109,
+								1109
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 13.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "api.txt",
+					"settings":
+					{
+						"buffer_size": 2941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2153,
+								2153
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2764.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 143.0,
+	"status_bar_visible": true
+}

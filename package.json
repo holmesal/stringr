@@ -1,0 +1,15 @@
+{
+  "name": "skynet-node",
+  "version": "0.0.1",
+  "dependencies": {
+    "restify": "2.2.x",
+    "socket.io": "0.9.x",
+    "mongoose": "3.6.0rc0",
+    "async": "0.2.x",
+    "mongo-express": "0.18.x"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
