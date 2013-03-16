@@ -134,6 +134,10 @@ POST /school - create a new school
 GET /school/{domain}
 	<- {Meta}
 
+GET /school/all
+	<- {Meta}
+	<- [{School}]
+
 GET /string/{string_id}
 	<- {Meta}
 	<- {PhotoString}

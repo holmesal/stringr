@@ -11,16 +11,14 @@ function failOrMake(req,res,err,schools){
 		} else{
 			//grab params
 			domain = req.params.domain
-			long_name = req.params.long_name
-			short_name = req.params.short_name
+			name = req.params.name
 			if (!domain){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: domain")); return false;}
-			if (!long_name){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: long_name")); return false;}
-			if (!short_name){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: short_name")); return false;}
+			if (!name){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: name")); return false;}
+			// if (!short_name){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: short_name")); return false;}
 			//create the school
 			var school = new School({
 				domain : domain,
-				long_name : long_name,
-				short_name : short_name
+				name: name
 			});
 			// save the school
 			school.save(function(err,school){
@@ -34,6 +32,8 @@ function failOrMake(req,res,err,schools){
 	}
 
 function newSchool(req,res){
+
+	// console.log(req.params)
 
 	domain = req.params.domain
 
@@ -66,6 +66,25 @@ function findSchool(req,res){
 
 }
 
+function allSchools(req,res){
+	School
+	.find({})
+	.exec(function(err,school){
+		allSchoolsRespond(req,res,err,school)
+	})
+}
+
+function allSchoolsRespond(req,res,err,schools){
+	if (err) {Responsify.error(res,new restify.InternalError("Error finding all schools.")); return false;}
+
+	if (!schools){
+		Responsify.error(res,new restify.InternalError("No schools found."));
+	} else{
+		Responsify.respond(res,200,schools)
+	}
+}
+
 
 module.exports.newSchool = newSchool;
 module.exports.findSchool = findSchool;
+module.exports.allSchools = allSchools;

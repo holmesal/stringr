@@ -3,6 +3,7 @@ var PhotoString = mongoose.model('PhotoString');
 var Photo = mongoose.model('Photo');
 var restify = require('restify');
 var Responsify = require('../utils/responsify.js')
+var async = require('async');
 
 
 function newString(req,res,user){
@@ -20,7 +21,9 @@ function newString(req,res,user){
 	var photostring = new PhotoString({
 		title: title,
 		description: description,
-		tags: tags
+		tags: tags,
+		school: user.school,
+		owner: user
 	})
 
 	for (var i = 0; i < photos.length; i++) {
@@ -69,6 +72,57 @@ function getStringRespond(req,res,err,string){
 	}
 }
 
+function find(req,res,user){
+	//called by the authenticator function
+	query = req.params.query
+	school = req.params.school
+	offset = req.params.offset
+
+	if (!offset){
+		offset = 0
+	}
+
+	// if (!query){
+	// 	find = PhotoString.find({})
+	// } else{
+	// 	// reg = new RegExp(query, "i")
+	// 	// find = PhotoString.find({$or:[ {'username':reg}, {'full_name':reg}]})
+	// 	// find = 
+	// }
+	
+	reg = new RegExp(query, "i")
+
+	find = PhotoString.find({tags: { $in: [reg]}})
+
+	if (school){
+		find.find({school:school})
+	}
+
+	find
+	.skip(offset)
+	.limit(20)
+	.populate("photos owner")
+	// .lean()
+	.exec(function(err,users){
+		findRespond(req,res,err,users)
+	})
+}
+
+function populatePhotos(item,callback){
+	item.populate("photos")
+	callback()
+}
+
+function findRespond(req,res,err,strings){
+	if (err) {Responsify.error(res,new restify.InternalError("Error finding strings.")); return false;}
+
+	async.each(strings,populatePhotos,function(){
+		Responsify.respond(res,200,strings)
+	})
+
+}
+
 
 module.exports.newString = newString;
 module.exports.getString = getString;
+module.exports.find = find;

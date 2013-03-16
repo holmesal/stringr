@@ -14,7 +14,6 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.Types.ObjectId
 
 //connect to mongodb
-console.log(process.env)
 mongopath = process.env.MONGOHQ_URL || 'mongodb://localhost/stringr'
 mongoose.connect(mongopath);
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -61,6 +60,11 @@ function userGetHandler(req,res){
   UserEndpoint.getUser(req,res)
 }
 
+function userFindHandler(req,res){
+  //find users
+  Authenticatify.Authenticate(req,res,UserEndpoint.find,true)
+}
+
 function userSelfHandler(req,res){
   //grab self, going through the authenticator function
   //heavy=true means to grab all the user params and populate stuff
@@ -87,9 +91,19 @@ function findSchoolHandler(req,res){
   SchoolEndpoint.findSchool(req,res)
 }
 
+function allSchoolsHandler(req,res){
+  //find all the schools
+  SchoolEndpoint.allSchools(req,res)
+}
+
 function newStringHandler(req,res){
   //grab user, going through the authenticator function
   Authenticatify.Authenticate(req,res,StringEndpoint.newString)
+}
+
+function findStringHandler(req,res){
+  //grab user, going through the authenticator function
+  Authenticatify.Authenticate(req,res,StringEndpoint.find,true)
 }
 
 function getStringHandler(req,res){
@@ -129,16 +143,22 @@ server.get('/verify/confirm/:user_id',verifyConfirmHandler)
 
 //user handlers
 server.get('/user/self',userSelfHandler)
+server.get('/user/find',userFindHandler)
 server.get('/user/:username',userGetHandler)
 server.post('/user/:tofollow/follow',userFollowHandler)
 server.post('/user/:tounfollow/unfollow',userUnfollowHandler)
 
+//search handlers
+// server.get('/search',searchHandler)
+
 //school handlers
 server.post('/school',makeSchoolHandler)
+server.get('/school/all',allSchoolsHandler)
 server.get('/school/:domain',findSchoolHandler)
 
 //string handlers
 server.post('/string/new',newStringHandler)
+server.get('/string/find',findStringHandler)
 server.get('/string/:string',getStringHandler)
 
 //photo handlers

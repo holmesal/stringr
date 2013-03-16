@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"User",
+				"UserEndpoint"
+			],
+			[
 				"res",
 				"res"
 			],
@@ -112,26 +116,10 @@
 	"buffers":
 	[
 		{
-			"file": "utils/sendmail.js",
-			"settings":
-			{
-				"buffer_size": 1374,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "endpoints/signup.js",
-			"settings":
-			{
-				"buffer_size": 1793,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 4354,
+				"buffer_size": 4968,
 				"line_ending": "Unix"
 			}
 		},
@@ -147,7 +135,47 @@
 			"file": "api.txt",
 			"settings":
 			{
-				"buffer_size": 2941,
+				"buffer_size": 2984,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "endpoints/user.js",
+			"settings":
+			{
+				"buffer_size": 4608,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "endpoints/school.js",
+			"settings":
+			{
+				"buffer_size": 2470,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "endpoints/string.js",
+			"settings":
+			{
+				"buffer_size": 3390,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/photostring.js",
+			"settings":
+			{
+				"buffer_size": 489,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/user.js",
+			"settings":
+			{
+				"buffer_size": 1152,
 				"line_ending": "Unix"
 			}
 		}
@@ -208,6 +236,8 @@
 	},
 	"file_history":
 	[
+		"/Users/alonsoholmes/github/stringr/endpoints/signup.js",
+		"/Users/alonsoholmes/github/stringr/utils/sendmail.js",
 		"/Users/alonsoholmes/github/stringr/endpoints/user.js",
 		"/Users/alonsoholmes/github/stringr/package.json",
 		"/Users/alonsoholmes/github/stringr/models/photostring.js",
@@ -218,8 +248,6 @@
 		"/Users/alonsoholmes/github/stringr/utils/authenticatify.js",
 		"/Users/alonsoholmes/github/stringr/api.txt",
 		"/Users/alonsoholmes/github/stringr/models/user.js",
-		"/Users/alonsoholmes/github/stringr/endpoints/signup.js",
-		"/Users/alonsoholmes/github/stringr/utils/sendmail.js",
 		"/Users/alonsoholmes/github/stringr/endpoints/photo.js",
 		"/Users/alonsoholmes/github/stringr/utils/signup.js",
 		"/Users/alonsoholmes/github/stringr/models/photo.js",
@@ -314,76 +342,23 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "utils/sendmail.js",
-					"settings":
-					{
-						"buffer_size": 1374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1325,
-								1325
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 567.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "endpoints/signup.js",
-					"settings":
-					{
-						"buffer_size": 1793,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1561,
-								1529
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "server.js",
 					"settings":
 					{
-						"buffer_size": 4354,
+						"buffer_size": 4968,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3541,
-								3541
+								3059,
+								3059
 							]
 						],
 						"settings":
@@ -393,13 +368,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 925.0,
+						"translation.y": 2782.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "endpoints/verify.js",
 					"settings":
 					{
@@ -416,7 +391,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 13.0,
@@ -425,19 +401,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "api.txt",
 					"settings":
 					{
-						"buffer_size": 2941,
+						"buffer_size": 2984,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2153,
-								2153
+								2604,
+								2604
 							]
 						],
 						"settings":
@@ -446,7 +422,140 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2764.0,
+						"translation.y": 2457.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "endpoints/user.js",
+					"settings":
+					{
+						"buffer_size": 4608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4443,
+								4443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3525.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "endpoints/school.js",
+					"settings":
+					{
+						"buffer_size": 2470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1741,
+								1497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 853.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "endpoints/string.js",
+					"settings":
+					{
+						"buffer_size": 3390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3281,
+								3194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "models/photostring.js",
+					"settings":
+					{
+						"buffer_size": 489,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "models/user.js",
+					"settings":
+					{
+						"buffer_size": 1152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

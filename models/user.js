@@ -16,7 +16,7 @@ function make(Schema, mongoose) {
 	    full_name: String,
 	    profile_img: {type:String, default: "http://lorempixel.com/output/technics-q-c-640-480-8.jpg"},
 	    school: {type: Schema.ObjectId,ref:'School'},
-	    strings_count: {type: Number, default: 0},
+	    // strings_count: {type: Number, default: 0},
 	    strings: [{type:Schema.Types.ObjectId,ref:'PhotoString'}],
 	    blurb: String,
 	    following: [{type: Schema.Types.ObjectId,ref:'User'}],

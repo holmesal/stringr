@@ -2,8 +2,7 @@ function make(Schema, mongoose) {
     //user schema
 	var schoolSchema = new Schema({
 	    domain: String,
-	    long_name: String,
-	    short_name: String,
+	    name: String,
 	    created : { type : Date, default: Date.now }
 
 	})

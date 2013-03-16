@@ -5,7 +5,9 @@ function make(Schema, mongoose) {
 		description: String,
 	    photos: [{type: Schema.ObjectId,ref:'Photo'}],
 	    tags: [String],
-	    created : { type : Date, default: Date.now }
+	    created : { type : Date, default: Date.now },
+	    school: {type: Schema.ObjectId,ref:'School'},
+	    owner: {type: Schema.ObjectId,ref:'User'},
 
 	})
 

@@ -1,7 +1,15 @@
 var mongoose = require('mongoose');
 var restify = require('restify');
 var User = mongoose.model('User');
+var PhotoString = mongoose.model('PhotoString');
 var Responsify = require('../utils/responsify.js');
+var async = require('async');
+
+function populatePhotos(item,callback){
+	PhotoString.populate(item,"photos",function(){
+		callback()
+	})
+}
 
 function getUserRespond(req,res,err,user){
 	if (err) {Responsify.error(res,new restify.InternalError("DB error finding user.")); return false;}
@@ -9,7 +17,9 @@ function getUserRespond(req,res,err,user){
 	if (!user){
 		Responsify.error(res,new restify.InternalError("No users with that username were found"));
 	} else{
-		Responsify.respond(res,200,user)
+		async.each(user.strings,populatePhotos,function(){
+			Responsify.respond(res,200,user)
+		})
 	}
 }
 
@@ -20,6 +30,7 @@ function getUser(req,res){
 	.findOne({username:username})
 	.select('username full_name profile_img school strings_count strings blurb following followers')
 	.populate('school')
+	.populate('strings')
 	.populate('following','username full_name profile_img school strings_count strings blurb following followers')
 	.populate('followers','username full_name profile_img school strings_count strings blurb following followers')
 	.lean()
@@ -30,23 +41,9 @@ function getUser(req,res){
 
 function getSelf(req,res,user){
 	//called by the authenticator function
-	Responsify.respond(res,200,user)
-	// var opts = {
- //        path: 'school following followers'
- //      , select: 'domain long_name short_name username full_name profile_img school strings_count strings blurb following followers'
- //    }
- //    User.populate(user,opts,function(err,user){
- //    	console.log(user)
- //    	var opts = {
- //        path: 'school following followers'
-	//       , select: 'domain long_name short_name username full_name profile_img school strings_count strings blurb following followers'
-	//     }
-	//     User.populate(user.following,opts,function(err,sub){
-	//     	console.log(sub)
-	    	
-	//     })
- //    })
-	
+	async.each(user.strings,populatePhotos,function(){
+		Responsify.respond(res,200,user)
+	})
 }
 
 function follow(req,res,user){
@@ -61,14 +58,6 @@ function follow(req,res,user){
 		followUser(req,res,err,user,tofollow)
 	})
 }
-
-// function unpopulate(user){
-// 	following = []
-// 	for (var i = 0; i < user.following.length; i++) {
-// 		following.push(user.following[i][_id])
-// 	};
-// 	user.following = following
-// }
 
 function followUser(req,res,err,user,tofollow){
 	if (!tofollow){
@@ -123,33 +112,45 @@ function unfollowUser(req,res,err,user,tounfollow){
 
 }
 
-// function getSelfRespond(req,res,err,user){
-// 	if (err){Responsify.error(res,new restify.InternalError("DB error finding user.")); return false;}
+function find(req,res,user){
+	//called by the authenticator function
+	query = req.params.query
+	school = req.params.school
+	offset = req.params.offset
 
-// 	if (!user){
-// 		Responsify.error(res,new restify.InternalError("Invalid auth code"));
-// 	} else{
-// 		Responsify.respond(res,200,user)
-// 	}
-// }
+	if (!offset){
+		offset = 0
+	}
 
-// function getSelf(req,res){
-// 	auth_token = req.query.auth_token
+	if (!query){
+		find = User.find({})
+	} else{
+		reg = new RegExp(query, "i")
+		find = User.find({$or:[ {'username':reg}, {'full_name':reg}]})
+	}
 
-// 	if (!auth_token){Responsify.error(res,new restify.NotAuthorizedError("You must pass an auth_token parameter.")); return false;}
+	if (school){
+		find.find({school:school})
+	}
 
-// 	User
-// 	.findOne({auth_token:auth_token})
-// 	.select('username full_name profile_img school strings_count strings blurb following followers verified email')
-// 	.populate('school')
-// 	.exec(function(err,user){
-// 		getSelfRespond(req,res,err,user)
-// 	})
-// }
+	find
+	.skip(offset)
+	.limit(20)
+	.lean()
+	.exec(function(err,users){
+		findRespond(req,res,err,users)
+	})
+}
 
+function findRespond(req,res,err,users){
+	if (err) {Responsify.error(res,new restify.InternalError("Error finding users.")); return false;}
 
+	Responsify.respond(res,200,users)
+
+}
 
 module.exports.getUser = getUser;
 module.exports.getSelf = getSelf;
 module.exports.follow = follow;
 module.exports.unfollow = unfollow;
+module.exports.find = find;
