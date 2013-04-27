@@ -13,21 +13,23 @@ function failOrMake(req,res,err,users){
 		} else{
 			//get params
 			email = req.params.email
-			pw = req.params.pw
-			username = req.params.username
+			profile_img = req.params.profile_img
+			// pw = req.params.pw
+			// username = req.params.username
 			school_id = req.params.school
 			//check
 			if (!email){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: email")); return false;}
-			if (!pw){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: pw")); return false;}
-			if (!username){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: username")); return false;}
+			if (!profile_img){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: profile_img")); return false;}
+			// if (!username){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: username")); return false;}
 			if (!school_id){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: school")); return false;}
 
 			//make user
 			var user = new User({
-				email:req.params.email,
-				pw:req.params.pw,
-				username:req.params.username,
-				school:req.params.school
+				email:email,
+				profile_img:profile_img,
+				// pw:req.params.pw,
+				// username:req.params.username,
+				school:school_id
 			});
 			//make the auth token
 			user.auth_token = user.makeAuthToken()

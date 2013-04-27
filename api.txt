@@ -108,9 +108,8 @@ POST requests:
 
 
 POST /signup - create a new account
-	-> {username,password,email,photo,school(id)}
+	-> {email,profile_img,school(id)}
 	<- {Meta}
-	'todo - add encryption'
 
 *GET /verify/resend/{username}
 	<- {User}

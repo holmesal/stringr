@@ -12,7 +12,7 @@ function makeAuthToken()
 function make(Schema, mongoose) {
     //user schema
 	var userSchema = new Schema({
-	    username: String,
+	    // username: String,
 	    full_name: String,
 	    profile_img: {type:String, default: "http://lorempixel.com/output/technics-q-c-640-480-8.jpg"},
 	    school: {type: Schema.ObjectId,ref:'School'},
@@ -24,7 +24,7 @@ function make(Schema, mongoose) {
 	    likes: [{type: Schema.Types.ObjectId,ref:'Photo'}],
 	    verified: {type: Boolean, default: false},
 	    email: String,
-	    pw: String,
+	    // pw: String,
 	    auth_token: String,
 	    created : { type : Date, default: Date.now }
 

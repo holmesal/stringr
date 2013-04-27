@@ -148,7 +148,7 @@ server.get('/verify/confirm/:user_id',verifyConfirmHandler)
 //user handlers
 server.get('/user/self',userSelfHandler)
 server.get('/user/find',userFindHandler)
-server.get('/user/:username',userGetHandler)
+server.get('/user/:uid',userGetHandler)
 server.post('/user/:tofollow/follow',userFollowHandler)
 server.post('/user/:tounfollow/unfollow',userUnfollowHandler)
 

@@ -15,7 +15,7 @@ function getUserRespond(req,res,err,user){
 	if (err) {Responsify.error(res,new restify.InternalError("DB error finding user.")); return false;}
 
 	if (!user){
-		Responsify.error(res,new restify.InternalError("No users with that username were found"));
+		Responsify.error(res,new restify.InternalError("No users with that uid were found"));
 	} else{
 		async.each(user.strings,populatePhotos,function(){
 			Responsify.respond(res,200,user)
@@ -24,10 +24,10 @@ function getUserRespond(req,res,err,user){
 }
 
 function getUser(req,res){
-	username = req.params.username
+	uid = req.params.uid
 
 	User
-	.findOne({username:username})
+	.findOne({_id:uid})
 	.select('username full_name profile_img school strings_count strings blurb following followers')
 	.populate('school')
 	.populate('strings')
