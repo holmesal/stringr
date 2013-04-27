@@ -7,7 +7,7 @@ schools = json.loads(open("src_json.py").read())
 school = schools[0]
 print school
 
-url = 'http://localhost:5000/school'
+url = 'http://ancient-wave-9102.herokuapp.com/school'
 
 for school in schools:
 	print school

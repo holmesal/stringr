@@ -52,6 +52,10 @@ Stringr object specifications
 		[Photo]
 	tags: array
 		[String]
+	is_public: boolean
+		true if public, false if not
+	contributors: array
+		[User]
 
 {Photo}
 	id: string
@@ -147,6 +151,16 @@ GET /string/{string_id}
 	-> tags = [tags]
 	-> title
 	-> description
+	-> is_public
+	<- {Meta}
+	<- {PhotoString}
+
+*POST /string/new
+	-> photos = [photo_urls]  	* ethan - don't allow contributors to remove photos
+	-> tags = [tags] 	 		* alonso handles contributors can only add
+	-> title					* alonso handles owner can only edit
+	-> description 				* alonso handles owner can only edit
+	-> is_public				* alonso handles strings can be made public but not made private
 	<- {Meta}
 	<- {PhotoString}
 

@@ -22,7 +22,6 @@ db.once('open', function callback () {
 });
 
 //db schemas
-var Schema = mongoose.Schema;
 var User = require('./models/user.js').make(Schema, mongoose);
 var School = require('./models/school.js').make(Schema, mongoose);
 var PhotoString = require('./models/photostring.js').make(Schema,mongoose);
@@ -111,6 +110,11 @@ function getStringHandler(req,res){
   StringEndpoint.getString(req,res)
 }
 
+function editStringHandler(req,res){
+  //grab user, going through the authenticator function
+  Authenticatify.Authenticate(req,res,StringEndpoint.editString,false,true)
+}
+
 function photoLikeHandler(req,res){
   Authenticatify.Authenticate(req,res,PhotoEndpoint.like,false,false)
 }
@@ -160,6 +164,7 @@ server.get('/school/:domain',findSchoolHandler)
 server.post('/string/new',newStringHandler)
 server.get('/string/find',findStringHandler)
 server.get('/string/:string',getStringHandler)
+server.post('/string/:string/edit', editStringHandler)
 
 //photo handlers
 server.post('/photo/:photo_id/like',photoLikeHandler)

@@ -8,6 +8,8 @@ function make(Schema, mongoose) {
 	    created : { type : Date, default: Date.now },
 	    school: {type: Schema.ObjectId,ref:'School'},
 	    owner: {type: Schema.ObjectId,ref:'User'},
+	    is_public: {type: Boolean, default: false},
+	    contributors: [{type: Schema.ObjectId,ref:'User'}]
 
 	})
 

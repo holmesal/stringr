@@ -119,7 +119,7 @@
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 4968,
+				"buffer_size": 5165,
 				"line_ending": "Unix"
 			}
 		},
@@ -135,7 +135,23 @@
 			"file": "api.txt",
 			"settings":
 			{
-				"buffer_size": 2984,
+				"buffer_size": 3462,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "endpoints/string.js",
+			"settings":
+			{
+				"buffer_size": 5329,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/photostring.js",
+			"settings":
+			{
+				"buffer_size": 594,
 				"line_ending": "Unix"
 			}
 		},
@@ -148,26 +164,26 @@
 			}
 		},
 		{
+			"file": "domain mining/domains.html",
+			"settings":
+			{
+				"buffer_size": 272425,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "domain mining/src_json.py",
+			"settings":
+			{
+				"buffer_size": 110016,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "endpoints/school.js",
 			"settings":
 			{
-				"buffer_size": 2470,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "endpoints/string.js",
-			"settings":
-			{
-				"buffer_size": 3390,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/photostring.js",
-			"settings":
-			{
-				"buffer_size": 489,
+				"buffer_size": 2404,
 				"line_ending": "Unix"
 			}
 		},
@@ -176,6 +192,30 @@
 			"settings":
 			{
 				"buffer_size": 1152,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "domain mining/test.py",
+			"settings":
+			{
+				"buffer_size": 13,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/school.js",
+			"settings":
+			{
+				"buffer_size": 301,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "domain mining/push.py",
+			"settings":
+			{
+				"buffer_size": 416,
 				"line_ending": "Unix"
 			}
 		}
@@ -236,6 +276,8 @@
 	},
 	"file_history":
 	[
+		"/Users/alonsoholmes/github/stringr/domain mining/src_json.py",
+		"/Users/alonsoholmes/github/stringr/domain mining/push.py",
 		"/Users/alonsoholmes/github/stringr/endpoints/signup.js",
 		"/Users/alonsoholmes/github/stringr/utils/sendmail.js",
 		"/Users/alonsoholmes/github/stringr/endpoints/user.js",
@@ -304,6 +346,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"is_private",
+			"–",
+			"ú",
+			"–",
+			"í",
+			"ü",
+			"ó",
+			"–",
+			"-",
+			"é",
+			"–",
+			"-",
+			"Schaumburg",
+			"–",
+			"antioch",
+			"/",
+			"\\",
 			"tofollow_username",
 			"password",
 			"PhotoString",
@@ -350,15 +409,15 @@
 					"file": "server.js",
 					"settings":
 					{
-						"buffer_size": 4968,
+						"buffer_size": 5165,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3059,
-								3059
+								3281,
+								3281
 							]
 						],
 						"settings":
@@ -368,7 +427,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2782.0,
+						"translation.y": 2055.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -395,7 +454,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -405,15 +464,15 @@
 					"file": "api.txt",
 					"settings":
 					{
-						"buffer_size": 2984,
+						"buffer_size": 3462,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2604,
-								2604
+								3194,
+								3194
 							]
 						],
 						"settings":
@@ -422,13 +481,66 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2457.0,
+						"translation.y": 3072.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "endpoints/string.js",
+					"settings":
+					{
+						"buffer_size": 5329,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4532,
+								4532
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3378.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "models/photostring.js",
+					"settings":
+					{
+						"buffer_size": 594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								454,
+								454
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "endpoints/user.js",
 					"settings":
 					{
@@ -449,84 +561,31 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3525.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "endpoints/school.js",
-					"settings":
-					{
-						"buffer_size": 2470,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1741,
-								1497
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 853.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "endpoints/string.js",
-					"settings":
-					{
-						"buffer_size": 3390,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3281,
-								3194
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2273.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "models/photostring.js",
+					"file": "domain mining/domains.html",
 					"settings":
 					{
-						"buffer_size": 489,
+						"buffer_size": 272425,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								349,
-								349
+								272200,
+								272200
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -536,6 +595,219 @@
 				},
 				{
 					"buffer": 7,
+					"file": "domain mining/src_json.py",
+					"settings":
+					{
+						"buffer_size": 110016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96631,
+								96631
+							],
+							[
+								97577,
+								97577
+							],
+							[
+								97637,
+								97637
+							],
+							[
+								97694,
+								97694
+							],
+							[
+								97801,
+								97801
+							],
+							[
+								97858,
+								97858
+							],
+							[
+								97981,
+								97981
+							],
+							[
+								98366,
+								98366
+							],
+							[
+								98423,
+								98423
+							],
+							[
+								98586,
+								98586
+							],
+							[
+								98640,
+								98640
+							],
+							[
+								98697,
+								98697
+							],
+							[
+								98755,
+								98755
+							],
+							[
+								98981,
+								98981
+							],
+							[
+								99046,
+								99046
+							],
+							[
+								99113,
+								99113
+							],
+							[
+								99175,
+								99175
+							],
+							[
+								99239,
+								99239
+							],
+							[
+								99313,
+								99313
+							],
+							[
+								99377,
+								99377
+							],
+							[
+								99438,
+								99438
+							],
+							[
+								99505,
+								99505
+							],
+							[
+								99947,
+								99947
+							],
+							[
+								100007,
+								100007
+							],
+							[
+								100243,
+								100243
+							],
+							[
+								100305,
+								100305
+							],
+							[
+								100478,
+								100478
+							],
+							[
+								100535,
+								100535
+							],
+							[
+								100715,
+								100715
+							],
+							[
+								100772,
+								100772
+							],
+							[
+								100894,
+								100894
+							],
+							[
+								101012,
+								101012
+							],
+							[
+								101070,
+								101070
+							],
+							[
+								101448,
+								101448
+							],
+							[
+								101514,
+								101514
+							],
+							[
+								101581,
+								101581
+							],
+							[
+								101647,
+								101647
+							],
+							[
+								101714,
+								101714
+							],
+							[
+								101779,
+								101779
+							],
+							[
+								101855,
+								101855
+							],
+							[
+								102473,
+								102473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 1109375.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "endpoints/school.js",
+					"settings":
+					{
+						"buffer_size": 2404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1247,
+								1247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 4.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "models/user.js",
 					"settings":
 					{
@@ -553,6 +825,85 @@
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "domain mining/test.py",
+					"settings":
+					{
+						"buffer_size": 13,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "models/school.js",
+					"settings":
+					{
+						"buffer_size": 301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "domain mining/push.py",
+					"settings":
+					{
+						"buffer_size": 416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
