@@ -27,7 +27,7 @@ function failOrCallback(req,res,err,user,callback){
 	if (err){Responsify.error(res,new restify.InternalError("DB error finding user.")); return false;}
 
 	if (!user){
-		Responsify.error(res,new restify.InternalError("Invalid auth code or email"));
+		Responsify.error(res,new restify.InternalError("Invalid auth code or email")); return false;
 	} else{
 
 		callback(req,res,user)
@@ -97,6 +97,9 @@ function Authenticate(req,res,callback,heavy,populate){
 	//post data is only in params, get param is in both .query and .params
 	auth_token = req.params.auth_token
 	email = req.params.email
+
+	console.log(auth_token)
+	console.log(email)
 
 	if (!auth_token){Responsify.error(res,new restify.NotAuthorizedError("You must pass an auth_token parameter.")); return false;}
 	if (!email){Responsify.error(res,new restify.NotAuthorizedError("You must pass a email parameter.")); return false;}
