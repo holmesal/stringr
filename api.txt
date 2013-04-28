@@ -95,7 +95,7 @@ Stringr object specifications
 
 API Endpoints
 
-URL: http://evening-sands-6835.herokuapp.com
+URL: api.stringrapp.com
 
 GET requests:
 	paramaters go in the URL
