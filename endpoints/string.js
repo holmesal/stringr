@@ -11,7 +11,7 @@ function newString(req,res,user){
 	photos = req.params.photos
 	tags = req.params.tags
 	title = req.params.title
-	description = req.params.description
+	// description = req.params.description
 
 	if (!photos){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: photos")); return false;}
 	if (!tags){Responsify.error(res,new restify.MissingParameterError("Missing or empty parameter: tags")); return false;}
@@ -20,7 +20,7 @@ function newString(req,res,user){
 	//create empty photo object
 	var photostring = new PhotoString({
 		title: title,
-		description: description,
+		// description: description,
 		tags: tags,
 		school: user.school,
 		owner: user

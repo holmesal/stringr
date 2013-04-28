@@ -104,14 +104,14 @@ POST requests:
 
 -> = parameter
 <- = response
-*  = authenticated, requires ACTING user's username and secret key
+*  = authenticated, requires ACTING user's email and auth_token
 
 
 POST /signup - create a new account
 	-> {email,profile_img,school(id)}
 	<- {Meta}
 
-*GET /verify/resend/{username}
+*GET /verify/resend/{email}
 	<- {User}
 	<- {Meta}
 
@@ -119,14 +119,14 @@ POST /signup - create a new account
 	<- {Meta}
 	<- {User}
 
-GET /user/{username} - Get information for a user (not current)
+GET /user/{user._id} - Get information for a user (not current)
 	<- {Meta}
 	<- {User}
 
-*POST /user/{username}/follow - Follow a user
+*POST /user/{user._id}/follow - Follow a user
 	<- {Meta}
 
-*POST /user/{username}/unfollow - Unfollow a user
+*POST /user/{user._id}/unfollow - Unfollow a user
 	<- {Meta}
 
 POST /school - create a new school
@@ -149,7 +149,6 @@ GET /string/{string_id}
 	-> photos = [photo_urls]
 	-> tags = [tags]
 	-> title
-	-> description
 	-> is_public
 	<- {Meta}
 	<- {PhotoString}
