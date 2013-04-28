@@ -95,6 +95,8 @@ Stringr object specifications
 
 API Endpoints
 
+URL: http://evening-sands-6835.herokuapp.com
+
 GET requests:
 	paramaters go in the URL
 	Ex: /user/self?auth_code=12345&username=alonsoholmes
