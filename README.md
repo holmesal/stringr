@@ -1,0 +1,176 @@
+Stringr object specifications
+
+{Bob} = object of type Bob
+[Bob] = array of objects of type Bob
+- = not included in compact version
+* = not included if not the acting user
+% = hidden, never included in response
+
+
+{User}
+	username: string
+		the user's username
+	full_name: string
+		the user's full name
+	profile_img: string
+		URL to profile image
+	school: object
+		{School}
+	strings_count: integer
+		the number of strings the user has
+	-strings: array
+		[PhotoString]
+	-blurb: string
+		the user's enlightening self-description
+	-following: array
+		[User-Compact]
+	-followers: array
+		[User-Compact]
+	*verified: boolean
+		boolean True if verified, False if not
+	*email: string
+		the user's .edu email
+	%auth_token: string
+		the auth token send to the user's email
+
+{School}
+	domain: string
+		everything between the @ and the .edu (lowercase please)
+	long_name: string
+		full school name
+	short_name: string
+		<10 character version of the school name
+
+{PhotoString}
+	title: string
+		the title of the photostring
+	description: string
+		a short description of the photostring
+	id: string
+		the id of the photostring
+	photos: array
+		[Photo]
+	tags: array
+		[String]
+	is_public: boolean
+		true if public, false if not
+	contributors: array
+		[User]
+
+{Photo}
+	id: string
+		the id of the image
+	url: string
+		the url to the image
+	likes: array
+		[User-Compact]
+	comments: array
+		[Comment]
+
+{Comment}
+	user: object
+		{User-Compact}
+	comment: string
+		the comment left by the user
+
+{Notification}
+	type: string
+		the type of notification
+		"new_string","like","follow","comment"
+	user: object
+		{User}
+	data: object
+		{PhotoString} or nothing
+
+{Meta}
+	status: boolean
+		1 if ok, 0 if not
+	code: integer
+		HTTP error code for response
+	message: string
+		any additional information
+
+
+
+
+API Endpoints
+
+GET requests:
+	paramaters go in the URL
+	Ex: /user/self?auth_code=12345&username=alonsoholmes
+POST requests:
+	parameters go in a JSON in the request body
+	content-type is application-json
+
+-> = parameter
+<- = response
+*  = authenticated, requires ACTING user's email and auth_token
+
+
+POST /signup - create a new account
+	-> {email,profile_img,school(id)}
+	<- {Meta}
+
+*GET /verify/resend/{email}
+	<- {User}
+	<- {Meta}
+
+*GET /user/self - Get information for the current user
+	<- {Meta}
+	<- {User}
+
+GET /user/{user._id} - Get information for a user (not current)
+	<- {Meta}
+	<- {User}
+
+*POST /user/{user._id}/follow - Follow a user
+	<- {Meta}
+
+*POST /user/{user._id}/unfollow - Unfollow a user
+	<- {Meta}
+
+POST /school - create a new school
+	-> {domain,long_name,short_name}
+	<- {Meta}
+	<- {School}
+
+GET /school/{domain}
+	<- {Meta}
+
+GET /school/all
+	<- {Meta}
+	<- [{School}]
+
+GET /string/{string_id}
+	<- {Meta}
+	<- {PhotoString}
+
+*POST /string/new
+	-> photos = [photo_urls]
+	-> tags = [tags]
+	-> title
+	-> is_public
+	<- {Meta}
+	<- {PhotoString}
+
+*POST /string/new
+	-> photos = [photo_urls]  	* ethan - don't allow contributors to remove photos
+	-> tags = [tags] 	 		* alonso handles contributors can only add
+	-> title					* alonso handles owner can only edit
+	-> description 				* alonso handles owner can only edit
+	-> is_public				* alonso handles strings can be made public but not made private
+	<- {Meta}
+	<- {PhotoString}
+
+*POST /photo/{photo_id}/like
+	<- {Meta}
+
+*POST /photo/{photo_id}/unlike
+	<- {Meta}
+
+*POST /photo/{photo_id}/comment
+	-> comment_text
+	<- {Meta}
+
+*POST /comment/{comment_id}/delete
+	<- {Meta}
